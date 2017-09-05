@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="revealjs/css/reveal.css">
+		<link rel="stylesheet" href="revealjs/css/theme/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="revealjs/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'revealjs/css/print/pdf.css' : 'revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- Introduction -->
+				<section>
+					<h1>Blockchains</h1>
+					<h5>Overview &amp; Functionality</h5>
+					<aside class="notes">
+						<ul>
+							<li>Usually thought of in combination with bitcoin</li>
+							<li>Bitcoin is not the only technology which uses the blockchain</li>
+						</ul>
+					</aside>
+				</section>
+
+				<!-- Transactions with banks / general financial transactions -->
+				<section>
+					<h2>financial transactions</h2>
+					<!-- TODO Image current transactions -->
+					<img src="images/blockchain/classic_transactions.png" />
+				</section>
+
+				<!-- Concept of trust, transactions without banks -->
+				<section>
+					<h2>A concept of trust</h2>
+					<!-- TODO Image current transactions without banks -->
+				</section>
+
+				<!-- Replacement of trust by mathematical proof -->
+				<section>
+					<h2>... better safe than sorry</h2>
+					<!-- TODO Image current transactions, to be tought of -->
+					<!-- Additionally info on trust based on reputation -->
+				</section>
+
+				<!-- Concept of blockchains -->
+				<section>
+					<h2>Blockchains</h2>
+					<!-- TODO Image blockchains -->
+				</section>
+
+				<!-- Concept of transactions -->
+				<section>
+					<h2>Transactions</h2>
+					<!-- TODO Image transactions -->
+				</section>
+
+				</div>
+		</div>
+
+		<script src="revealjs/lib/js/head.min.js"></script>
+		<script src="revealjs/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'revealjs/plugin/markdown/marked.js' },
+					{ src: 'revealjs/plugin/markdown/markdown.js' },
+					{ src: 'revealjs/plugin/notes/notes.js', async: true },
+					{ src: 'revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
