@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="revealjs/css/reveal.css">
+		<link rel="stylesheet" href="revealjs/css/theme/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="revealjs/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'revealjs/css/print/pdf.css' : 'revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>IOTA</h1>
+					<h4><a href="https://iota.org/">https://iota.org/</a></h4>
+				</section>
+
+				<section>
+					<h2>Langsame Transaktionen</h1>
+					<ul>
+						<li>BTC: ~7 t/s</li>
+						<li>ETH: ~14 t/s</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Unendliche Skalierbarkeit</h2>
+				</section>
+
+				<section>
+					<aside class="notes">
+						<ul>
+							<li>Jeder Miner braucht Transaktionshistorie aller Teilnehmer</li>
+							<li>Prinzip deshalb schwerfällig</li>
+						</ul>
+					</aside>
+					<h2>Klassische Blockchains</h2>
+					<ul>
+						<li>Aktive Teilnehmer (Miner)</li>
+						<li>Passive Teilnehmer</li>
+					</ul>
+				</section>
+
+				<section>
+					<aside class="notes">
+						<ul>
+							<li>Eintrag gilt als akzeptiert, wenn er von einer Mindestanzahl an Teilnehmern bestätigt wurde</li>
+							<li>Keine Trennung, jeder Teilnehmer bestätigt Transaktionen</li>
+						</ul>
+					</aside>
+					<h2>Tangle</h2>
+					<img src="images/iota/tangle.png" />
+				</section>
+
+				<section>
+					<aside class="notes">
+						<ul>
+							<li>Spam Schutz: BTC und ETH begrenzte Blockgröße, Ripple Transaktionsgebühr</li>
+							<li>Ziel: Wenige offenen Enden, da offenes Ende = unbestätigte Transaktion</li>
+						</ul>
+					</aside>
+					<h2>Transaktionen</h2>
+					<ul>
+						<li>Mindestens zwei andere Transaktionen bestätigen</li>
+						<li>Transaktionen verifizieren</li>
+						<li>Nonce berechnen zur Spam-Verhinderung</li>
+					</ul>
+					<b>&rArr; Keine Transaktionsgebühren</b>
+				</section>
+
+				<section>
+					<h2>Quantum Resistance</h2>
+					<ul>
+						<li>Verwendung von hash-based signatures + Winternitz signatures</li>
+						<li>BTC setzt auf elliptic curve cryptography (ECC)</li>
+					</ul>
+				</section>
+
+				<section>
+					<aside class="notes">
+						<ul>
+							<li>Snapshots: Abschneiden der offenen Enden -> Neue Startpunkte</li>
+							<li>Problem: Koordinatoren sind zentralisiert</li>
+						</ul>
+					</aside>
+					<h2>Weitere Features</h2>
+					<ul>
+						<li>Snapshots</li>
+						<li><a href="https://learn.iota.org/tutorials">APIs</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Links</h2>
+					<ul>
+						<li>
+							<a href="http://iota.org/">Website</a>
+						</li>
+						<li>
+							<a href="https://iota.org/IOTA_Whitepaper.pdf">Whitepaper</a>
+						</li>
+						<li>
+							<a href="https://github.com/iotaledger/wallet/releases">Wallet</a>
+						</li>
+						<li>
+							<a href=""></a>
+						</li>
+						<li>
+							<a href=""></a>
+						</li>
+					</ul>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="revealjs/lib/js/head.min.js"></script>
+		<script src="revealjs/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'revealjs/plugin/markdown/marked.js' },
+					{ src: 'revealjs/plugin/markdown/markdown.js' },
+					{ src: 'revealjs/plugin/notes/notes.js', async: true },
+					{ src: 'revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
